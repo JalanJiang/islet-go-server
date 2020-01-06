@@ -1,0 +1,11 @@
+# 记录数据结构
+type Note {
+    id: ID!
+    text: String!
+    images: [String!]!
+    author: User!
+    upVoteCount: Int!
+    createdAt: Time!
+    updatedAt: Time!
+    # deletedAt: Time!
+}

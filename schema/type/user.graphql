@@ -1,0 +1,11 @@
+# 用户数据结构
+type User {
+    id: ID!
+    mobile: String!
+    # password: String
+    shareFlag: String! # 暂定
+    nickname: String!
+    signature: String
+    avatar: String
+    createdAt: Time!
+}

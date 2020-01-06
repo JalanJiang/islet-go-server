@@ -1,0 +1,13 @@
+# 记本数据结构
+type Book {
+    id: ID!
+    name: String!
+    description: String
+    cover: String
+    isPrivate: Boolean!
+    bookType: BookType!
+    frequency: Int
+    createdAt: Time!
+    updatedAt: Time!
+    # deletedAt: Time
+}
