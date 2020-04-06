@@ -1,0 +1,57 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+# User Schema
+type User {
+  id: ID!
+  mobile: String!
+  shareFlag: String!
+  avatar: String
+  signature: String
+  nickname: String
+}
+
+# Book Schema
+type Book {
+  id: ID!
+  name: String!
+  description: String
+  cover: String
+  isPrivate: Boolean!
+  type: Int!
+  frequency: Int!
+  updatedAt: String! # Update Date
+  createdAt: String! # Create Date
+}
+
+# Note Schema
+type Note {
+  id: ID!
+  text: String!
+  images: [String!]
+  author: User!
+  upvoteCount: Int!
+  updatedAt: String! # Update Date
+  createdAt: String! # Create Date
+}
+
+# Query
+type Query {
+  book(id: ID!): Book!
+}
+
+# Input Schema
+input NewBook {
+  name: String!
+  description: String!
+  cover: String
+  isPrivate: Boolean!
+  type: Int!
+  frequency: Int!
+}
+
+# Mutation
+type Mutation {
+  createBook(input: NewBook!): Book!
+}
